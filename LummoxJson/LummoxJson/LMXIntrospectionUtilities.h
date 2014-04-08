@@ -20,16 +20,21 @@ typedef void(^LMXIntrospectionPropertyValueBlock)(NSString *name, LMXIntrospecti
 @interface NSObject (LMXIntrospection)
 
 /*!
+ Get some data about the type of a named property.
+ */
++ (LMXIntrospectionType *)lmx_propertyTypeForKey:(NSString *)propertyKey;
+
+/*!
  Iterate through all the properties of the class and call the block for each one.
  */
 + (void)lmx_enumeratePropertiesWithBlock:(LMXIntrospectionPropertyBlock)propertyBlock;
+
+- (void)lmx_safeSetValue:(id)value forKey:(NSString *)key;
 
 /*!
  Iterate through all the properties of the class, get the value for each property, and call 
  the block for each one.
  */
 - (void)lmx_enumeratePropertyValuesWithBlock:(LMXIntrospectionPropertyValueBlock)propertyBlock;
-
-+ (LMXIntrospectionType *)lmx_propertyTypeForKey:(NSString *)propertyKey;
 
 @end

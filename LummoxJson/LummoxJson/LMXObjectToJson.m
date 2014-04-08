@@ -19,6 +19,17 @@
     return nil;
 }
 
+- (NSString *)lmx_jsonString {
+    id jsonObject = [self lmx_jsonObject];
+    NSData *data = [NSJSONSerialization dataWithJSONObject:jsonObject options:0 error:nil];
+    
+    if (!data) {
+        return nil;
+    }
+    
+    return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+}
+
 @end
 
 /*

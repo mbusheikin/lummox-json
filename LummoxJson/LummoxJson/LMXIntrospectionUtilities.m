@@ -64,7 +64,22 @@
     const char *propertyCString = [propertyKey cStringUsingEncoding:NSUTF8StringEncoding];
     objc_property_t propertyInfo = class_getProperty([self class], propertyCString);
     
+    if (propertyInfo == NULL) {
+        type.primitiveType = LMXIntrospectionPrimitiveTypeNone;
+        return type;
+    }
+    
     return [self lmx_typeForPropertyInfo:propertyInfo];
+}
+
+- (void)lmx_safeSetValue:(id)value forKey:(NSString *)key {
+    // For now, just try/catch.
+    @try {
+        [self setValue:value forKey:key];
+    }
+    @catch (NSException *exception) {
+        // Silently fail, or else there's too much noise. In the future maybe make it configurable?
+    }
 }
 
 #pragma mark - Helpers

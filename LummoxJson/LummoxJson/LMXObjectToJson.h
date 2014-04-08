@@ -20,4 +20,9 @@
  */
 - (id)lmx_jsonObject;
 
+/*!
+ Simple utility for getting a Json string.
+ */
+- (NSString *)lmx_jsonString;
+
 @end

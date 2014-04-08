@@ -23,6 +23,8 @@
 		2748F92418F0D55400EE12F3 /* LMXIntrospectionUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 2748F92318F0D55400EE12F3 /* LMXIntrospectionUtilities.m */; };
 		2748F92718F0DF8F00EE12F3 /* LMXIntrospectionType.m in Sources */ = {isa = PBXBuildFile; fileRef = 2748F92618F0DF8F00EE12F3 /* LMXIntrospectionType.m */; };
 		2748F92918F0E79D00EE12F3 /* LMXInterpolationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2748F92818F0E79D00EE12F3 /* LMXInterpolationTests.m */; };
+		2748F92D18F343BC00EE12F3 /* LMXJsonToObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2748F92C18F343BC00EE12F3 /* LMXJsonToObjectTests.m */; };
+		2748F93018F3448400EE12F3 /* LMXTestPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 2748F92F18F3448400EE12F3 /* LMXTestPerson.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,9 @@
 		2748F92518F0DF8F00EE12F3 /* LMXIntrospectionType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMXIntrospectionType.h; sourceTree = "<group>"; };
 		2748F92618F0DF8F00EE12F3 /* LMXIntrospectionType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMXIntrospectionType.m; sourceTree = "<group>"; };
 		2748F92818F0E79D00EE12F3 /* LMXInterpolationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMXInterpolationTests.m; sourceTree = "<group>"; };
+		2748F92C18F343BC00EE12F3 /* LMXJsonToObjectTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMXJsonToObjectTests.m; sourceTree = "<group>"; };
+		2748F92E18F3448400EE12F3 /* LMXTestPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMXTestPerson.h; sourceTree = "<group>"; };
+		2748F92F18F3448400EE12F3 /* LMXTestPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMXTestPerson.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,7 +147,10 @@
 		2748F8FC18EF539500EE12F3 /* LummoxJsonTests */ = {
 			isa = PBXGroup;
 			children = (
+				2748F92E18F3448400EE12F3 /* LMXTestPerson.h */,
+				2748F92F18F3448400EE12F3 /* LMXTestPerson.m */,
 				2748F92818F0E79D00EE12F3 /* LMXInterpolationTests.m */,
+				2748F92C18F343BC00EE12F3 /* LMXJsonToObjectTests.m */,
 				2748F8FD18EF539500EE12F3 /* Supporting Files */,
 			);
 			path = LummoxJsonTests;
@@ -296,7 +304,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2748F93018F3448400EE12F3 /* LMXTestPerson.m in Sources */,
 				2748F92918F0E79D00EE12F3 /* LMXInterpolationTests.m in Sources */,
+				2748F92D18F343BC00EE12F3 /* LMXJsonToObjectTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
