@@ -8,6 +8,8 @@
 
 #import "LMXObjectToJson.h"
 
+#import "LMXIntrospectionUtilities.h"
+
 @implementation LMXObjectToJson
 
 @end
@@ -15,8 +17,15 @@
 @implementation NSObject (LMXObjectToJson)
 
 - (id)lmx_jsonObject {
-    // TODO: Iterate through the object's properties to return a json object.
-    return nil;
+    NSMutableDictionary *jsonObject = [NSMutableDictionary dictionary];
+    
+    [self lmx_enumeratePropertyValuesWithBlock:^(NSString *name, LMXIntrospectionType *type, id value) {
+        if (value) {
+            jsonObject[name] = [value lmx_jsonObject];
+        }
+    }];
+    
+    return [jsonObject copy];
 }
 
 - (NSString *)lmx_jsonString {

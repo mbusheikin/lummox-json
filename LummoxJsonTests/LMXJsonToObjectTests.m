@@ -10,7 +10,7 @@
 
 #import "LMXJsonToObject.h"
 
-#import "LMXTestPerson.h"
+#import "LMXTestType.h"
 
 @interface LMXJsonToObjectTests : XCTestCase
 
@@ -21,10 +21,10 @@
 - (void)testEmptyParsing {
     NSDictionary *json = @{};
     
-    LMXTestPerson *test = [json lmx_objectFromJsonWithClass:[LMXTestPerson class]];
+    LMXTestType *test = [json lmx_objectFromJsonWithClass:[LMXTestType class]];
     XCTAssertTrue(test != nil, @"shouldn't be nil.");
     
-    test = [LMXTestPerson new];
+    test = [LMXTestType new];
     
     test.primitiveArrayProperty = @[ @1 ];
     [test lmx_populateWithJson:json];
@@ -55,7 +55,7 @@
                            @"primitiveDictionaryProperty": @{ @"key1": @"value1" },
                            };
     
-    LMXTestPerson *test = [json lmx_objectFromJsonWithClass:[LMXTestPerson class]];
+    LMXTestType *test = [json lmx_objectFromJsonWithClass:[LMXTestType class]];
     
     XCTAssertTrue(test.intProperty == 1, @"Wrong value.");
     XCTAssertTrue(test.integerProperty == 2, @"Wrong value.");

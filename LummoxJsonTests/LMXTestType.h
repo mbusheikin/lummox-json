@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface LMXTestPerson : NSObject
+@interface LMXTestType : NSObject
 
 @property (nonatomic) int intProperty;
 @property (nonatomic) NSInteger integerProperty;
@@ -17,7 +17,7 @@
 
 @property (nonatomic, strong) NSString *misspelledProperty; //@"mmisspelledProperty" also maps here.
 
-@property (nonatomic, strong) LMXTestPerson *recursiveProperty;
+@property (nonatomic, strong) LMXTestType *recursiveProperty;
 
 @property (nonatomic, strong) NSArray *primitiveArrayProperty;
 @property (nonatomic, strong) NSArray *recursiveArrayProperty;

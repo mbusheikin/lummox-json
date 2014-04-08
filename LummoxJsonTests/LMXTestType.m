@@ -6,15 +6,15 @@
 //  Copyright (c) 2014 Lummox Labs. All rights reserved.
 //
 
-#import "LMXTestPerson.h"
+#import "LMXTestType.h"
 
 #import "LMXJsonToObject.h"
 
-@implementation LMXTestPerson
+@implementation LMXTestType
 
 - (Class)lmx_classForJson:(id)json inArrayWithKey:(NSString *)propertyKey {
     if ([propertyKey isEqualToString:@"recursiveArrayProperty"]) {
-        return [LMXTestPerson class];
+        return [LMXTestType class];
     }
     
     return [super lmx_classForJson:json inArrayWithKey:propertyKey];
